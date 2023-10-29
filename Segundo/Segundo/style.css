@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+
+    color: black;
+    background-color: white;
+    object-position: center;
+}
+.contenedor{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 0.2fr 3fr 0.3fr;
+    grid-template-areas:
+    "header header header header header"
+    "barraNav barraNav barraNav barraNav barraNav"
+    "lat1 mainA mainA mainA lat2"
+    "footer footer footer footer footer";
+}
+header{
+    display: grid;
+    grid-area: header;
+    grid-template-columns: subgrid;
+    grid-template-areas:
+"logo coName coName reloj reloj";
+}
+
+.horizontal-gradient {
+    background: linear-gradient(to right, grey, white,  violet, black);
+}
+#logo{
+    display: grid;
+    object-fit: cover;
+}
+
+#coName{
+    display: grid;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-size: xxx-large;
+}
+
+#reloj{
+    display: grid;
+    grid-area: reloj;
+    font-family: 'Share Tech Mono', serif;
+    color: lightgrey;
+    text-align: center;
+    align-items: center;
+
+}
+#tiempo{
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding: 1px;
+}
+
+#barraNav{
+    display: grid;
+    grid-area: barraNav;
+    background-color: darkslategrey;
+}
+.boton{
+    border: none;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 0 28px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+#mainA{
+    display: grid;
+    background-color: white;
+    grid-area: mainA;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2%;
+    /*mov Fotos*/
+    /*overflow: hidden;*/
+}
+.product{
+    display: grid;
+    grid-auto-rows: 22rem;
+    padding: 7%;
+    grid-template-rows: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-auto-flow: dense;
+    overflow: hidden;
+}
+img{
+    transition: transform 1s ease-in-out;
+}
+.images{ /*esto debe quedar así. solo falta borde superior*/
+    height: 100%;
+    width: 100%;
+    object-fit: cover ;
+    object-position: center;
+    /*mov fotos*/
+
+}
+
+#lat1{
+    display: grid;
+    grid-area: lat1;
+}
+#lat2{
+    display: grid;
+    grid-area: lat2;
+}
+footer{
+    display: grid;
+    grid-area: footer;
+    text-align: right;
+}
